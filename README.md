@@ -1,4 +1,4 @@
-# HumanDispersalModel
+## "Our Way Model" - A human dispersal model
 
 Source code for the "Our Way Model" human dispersal simulation, developed by Dr. Christian Wegener for the CRC806 project. 
 The documentation is rather rudimentary as the model is subject to continuous development and may feature significant changes and a possible rewrite.
