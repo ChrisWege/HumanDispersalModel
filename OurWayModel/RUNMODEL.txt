@@ -8,12 +8,13 @@ Once you have made your chances, save the configuration file and execute "compil
 Once successfully compiled, the model can be run by executing "run_mm". Make sure to adjust the number of cores to use in this file:
 export OMP_NUM_THREADS=4
 
-A Status update is given in the console, as well as saved in a log file. Once the model has finished, your results will be saved in a netCDF file specified by the path given in the configuration.
+A Status update is given in the console, as well as saved in a log file. Once the model has finished, your results will be saved in a netCDF file specified by the path given in the configuration. The run time of the model depends on the number of years, the chosen time step, and the number of cores for multiprocessing. Therefore, the simulation time can range from seconds to hours.
 
 Postprocessing the results is optional, but it includes several calculations to aid in evaluating the results, such as total population sum over the domain, individual contributions of each term, density fluxes, and more. "Postprocess_multi.py" uses parallelization to speed up the calculations.
 
 The model requires several different input data, as can be seen in "mmf_config.f95". These have to be provided by yourself, for which the Preprocessing file "Preprocess.py" in "PrePostprocessing" might be useful. 
-For idealized tests of the model, examples are available in "data/PreprocessedHEP". As these represent temporal fixed HEPs, make sure to adjust the "switch_slices" variable to "0", to indicate that the HEP does not change over time during the model run.
+For idealized tests of the model, examples are available in "data/PreprocessedHEP". As these represent temporal fixed HEPs, make sure to adjust the "switch_slices" variable to "0", to indicate that the HEP does not change over time during the model run. The expected results of these idealized simulations can be seen in section 3.5 of the paper "Reconstruction of Human Dispersal during
+Aurignacian on Pan-European Scale" (Link will be added later).
 
 The "Out of Africa" Simulation requires the file:
 Preprocessed_auri_grav_45k_25k_gaus_init_5hp100km2_glac_extended.nc
