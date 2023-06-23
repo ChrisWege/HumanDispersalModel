@@ -2,17 +2,17 @@ Make sure that all required dependencies are installed.
 
 Adjust "compile_mm" to your needs, switching the compiler (gfortran) and flags as necessary. Make sure to correctly link the netcdf-f libraries for both -I and -L flags.
 
-All configurations, such as path to input and outputfiles, the timelength to run the model, parameters to use and which parts of the model to exlude, are made in "mmf_config.f95". Most parameters have a rudimentary explanation directly next to them.
+All configurations, such as the path to input and output files, the time length to run the model, parameters to use, and which parts of the model to exclude, are made in "mmf_config.f95". Most parameters have a rudimentary explanation directly next to them.
 
 Once you have made your chances, save the configuration file and execute "compile_mm" in your console (e.g. ./compile_mm using a bash console).
-Once sucessfuly compiled, the model can be run by executing "run_mm". Make sure to adjust the number of cores to use in this file:
+Once successfully compiled, the model can be run by executing "run_mm". Make sure to adjust the number of cores to use in this file:
 export OMP_NUM_THREADS=4
 
-A Status update is given in the console, as well as saved in a logfile. Once the model has finished, your results will be saved in a netCDF file specified by the path given in the configuration.
+A Status update is given in the console, as well as saved in a log file. Once the model has finished, your results will be saved in a netCDF file specified by the path given in the configuration.
 
-Postprocessing the results is optional, but it includes several calculations to aid in evaluating the results, such as total population sum over the domain, individual contributions of each term, density fluxes and more. "Postprocess_multi.py" uses parallelization to speed up the calculations.
+Postprocessing the results is optional, but it includes several calculations to aid in evaluating the results, such as total population sum over the domain, individual contributions of each term, density fluxes, and more. "Postprocess_multi.py" uses parallelization to speed up the calculations.
 
-The model requires several different Inputdata, as can be seen in "mmf_config.f95". These have to be provided by yourself, for which the Preprocessing file "Preprocess.py" in "PrePostprocessing" might be useful. 
+The model requires several different input data, as can be seen in "mmf_config.f95". These have to be provided by yourself, for which the Preprocessing file "Preprocess.py" in "PrePostprocessing" might be useful. 
 For idealized tests of the model, examples are available in "data/PreprocessedHEP". As these represent temporal fixed HEPs, make sure to adjust the "switch_slices" variable to "0", to indicate that the HEP does not change over time during the model run.
 
 The "Out of Africa" Simulation requires the file:
@@ -21,7 +21,7 @@ which can be downloaded from here till 31.12.2023 with the password "CRC806":
 https://uni-koeln.sciebo.de/s/LCUK7YEvD239Jho
 
 
-PhD Thesis, containing documentation of the physics of the first working version:
+Ph.D. Thesis, containing documentation of the physics of the first working version:
 https://kups.ub.uni-koeln.de/54602/
 
 
