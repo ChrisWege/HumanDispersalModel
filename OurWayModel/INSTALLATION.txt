@@ -1,8 +1,12 @@
 The model is located in "OurWayModel" as several source files written in Fortran.
-Pre- and Postprocessing is done using Python 3 scripts.
-Some example inputdata can be found in "data".
+Pre- and post-processing is done using Python 3 scripts.
+Some example input data can be found in "data".
+
+Installation time: a few minutes up to an hour, depending on the amount of requirements already met by your system
 
 REQUIREMENTS to use the model:
+
+UNIX Operation system (e.g Ubuntu 22.04.2 LTS)
 
 OurWayModel:
 A Fortran compiler (e.g. gfortran 11.3.0 or newer) with shared memory multi-processing (e.g. OpenMP with the version number depending on gfortran version)
