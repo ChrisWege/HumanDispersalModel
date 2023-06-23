@@ -1,0 +1,2 @@
+rm mmf_config.mod mmf_setup.mod
+gfortran -fopenmp -g -fcheck=all -Wall -o mobility_model mmf_config.f95 mmf_setup.f95 mmf_run.f95 -I/usr/include -L/usr/lib -lnetcdff 

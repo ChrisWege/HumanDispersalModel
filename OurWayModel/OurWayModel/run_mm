@@ -1,0 +1,3 @@
+export OMP_NUM_THREADS=4
+logfile="log.$RANDOM"
+./mobility_model 2>&1 | tee $logfile

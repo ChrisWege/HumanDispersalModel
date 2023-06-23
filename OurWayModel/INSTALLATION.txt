@@ -1,0 +1,22 @@
+The model is located in "OurWayModel" as several source files written in Fortran.
+Pre- and Postprocessing is done using Python 3 scripts.
+Some example inputdata can be found in "data".
+
+REQUIREMENTS to use the model:
+
+OurWayModel:
+A Fortran compiler (e.g. gfortran 11.3.0 or newer) with shared memory multi-processing (e.g. OpenMP with the version number depending on gfortran version)
+netcdf and netcdf-f installed and properly linked libraries
+
+Pre- and Postprocessing with Python:
+Python 3.10 or newer
+
+Packages:
+netCDF4 (1.21.5 or newer)
+numpy (1.5.8 or newer)
+geographiclib (2.0 or newer)
+
+Optional:
+ncview (program) to get a first look at the data within a netCDF file (.nc)
+xarray (python-package) to open netCDF files in a simpler and more "pythonic" way
+matplotlib combined with cartopy (python-packages): allows to create plots of the data with various projections on the earth's surface
